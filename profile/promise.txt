@@ -1,0 +1,218 @@
+Statistical profiling result from isolate-0x45ea1b0-14937-v8.log, (21282 ticks, 6 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+  14394   67.6%          /home/moniz/.nvm/versions/node/v12.11.1/bin/node
+   1068    5.0%          /usr/lib/x86_64-linux-gnu/libc-2.31.so
+     14    0.1%          /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28
+     10    0.0%          [vdso]
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+    284    1.3%    4.9%  LazyCompile: *startCPUComsumedProcess /mnt/d/work/play/jsp/node-async-block/src/promise.js:31:33
+     71    0.3%    1.2%  LazyCompile: *hidden internal/errors.js:233:25
+     51    0.2%    0.9%  LazyCompile: *getEncodingOps buffer.js:644:24
+     16    0.1%    0.3%  LazyCompile: *<anonymous> buffer.js:319:36
+
+ [C++]:
+   ticks  total  nonlib   name
+    979    4.6%   16.9%  node::StringBytes::Encode(v8::Isolate*, char const*, unsigned long, node::encoding, v8::Local<v8::Value>*)
+    405    1.9%    7.0%  __libc_malloc
+    291    1.4%    5.0%  __GI___pthread_rwlock_unlock
+    232    1.1%    4.0%  int v8::(anonymous namespace)::WriteUtf8Impl<unsigned char>(v8::internal::Vector<unsigned char const>, char*, int, int, int*)
+    218    1.0%    3.8%  __GI___pthread_rwlock_wrlock
+    184    0.9%    3.2%  __libc_calloc
+    168    0.8%    2.9%  v8::internal::Builtin_ArrayBufferConstructor(int, unsigned long*, v8::internal::Isolate*)
+    168    0.8%    2.9%  __write
+    149    0.7%    2.6%  __libc_free
+    142    0.7%    2.4%  v8::String::NewFromOneByte(v8::Isolate*, unsigned char const*, v8::NewStringType, int)
+    138    0.6%    2.4%  v8::internal::String::Flatten(v8::internal::Isolate*, v8::internal::Handle<v8::internal::String>, v8::internal::AllocationType)
+    129    0.6%    2.2%  v8::HandleScope::HandleScope(v8::Isolate*)
+    126    0.6%    2.2%  node::crypto::RandomBytes(v8::FunctionCallbackInfo<v8::Value> const&)
+    121    0.6%    2.1%  v8::Value::IsArrayBufferView() const
+    119    0.6%    2.1%  v8::String::WriteUtf8(v8::Isolate*, char*, int, int*, int) const
+    116    0.5%    2.0%  node::ParseEncoding(char const*, node::encoding)
+     93    0.4%    1.6%  __GI___pthread_getspecific
+     91    0.4%    1.6%  __pthread_cond_signal
+     90    0.4%    1.6%  void node::Buffer::(anonymous namespace)::StringSlice<(node::encoding)5>(v8::FunctionCallbackInfo<v8::Value> const&)
+     90    0.4%    1.6%  v8::ArrayBuffer::GetContents()
+     81    0.4%    1.4%  v8::Isolate::GetCurrentContext()
+     73    0.3%    1.3%  v8::Object::InternalFieldCount()
+     70    0.3%    1.2%  __GI___pthread_mutex_lock
+     64    0.3%    1.1%  node::crypto::Hash::HashUpdate(v8::FunctionCallbackInfo<v8::Value> const&)
+     59    0.3%    1.0%  v8::HandleScope::~HandleScope()
+     59    0.3%    1.0%  node::Buffer::(anonymous namespace)::ParseArrayIndex(node::Environment*, v8::Local<v8::Value>, unsigned long, unsigned long*)
+     57    0.3%    1.0%  node::Utf8Value::Utf8Value(v8::Isolate*, v8::Local<v8::Value>)
+     56    0.3%    1.0%  __GI___pthread_mutex_unlock
+     54    0.3%    0.9%  node::StringBytes::StorageSize(v8::Isolate*, v8::Local<v8::Value>, node::encoding)
+     54    0.3%    0.9%  node::Environment::GetFromCallbackData(v8::Local<v8::Value>)
+     54    0.3%    0.9%  _init
+     52    0.2%    0.9%  v8::Value::ToString(v8::Local<v8::Context>) const
+     44    0.2%    0.8%  v8::Value::IsObject() const
+     44    0.2%    0.8%  node::StringBytes::Write(v8::Isolate*, char*, unsigned long, v8::Local<v8::Value>, node::encoding, int*)
+     43    0.2%    0.7%  __libc_realloc
+     38    0.2%    0.7%  node::StringBytes::InlineDecoder::Decode(node::Environment*, v8::Local<v8::String>, v8::Local<v8::Value>, node::encoding)
+     36    0.2%    0.6%  v8::ArrayBufferView::Buffer()
+     32    0.2%    0.6%  node::native_module::NativeModuleEnv::CompileFunction(v8::FunctionCallbackInfo<v8::Value> const&)
+     32    0.2%    0.6%  node::ParseEncoding(v8::Isolate*, v8::Local<v8::Value>, node::encoding)
+     32    0.2%    0.6%  node::Buffer::HasInstance(v8::Local<v8::Value>)
+     29    0.1%    0.5%  v8::ArrayBufferView::ByteLength()
+     29    0.1%    0.5%  __GI___pthread_once
+     21    0.1%    0.4%  v8::Value::IntegerValue(v8::Local<v8::Context>) const
+     21    0.1%    0.4%  node::crypto::RandomBytesJob::~RandomBytesJob()
+     21    0.1%    0.4%  node::NodeArrayBufferAllocator::Allocate(unsigned long)
+     19    0.1%    0.3%  node::BaseObject::FromJSObject(v8::Local<v8::Object>)
+     14    0.1%    0.2%  v8::ArrayBufferView::ByteOffset()
+     14    0.1%    0.2%  std::__detail::_Prime_rehash_policy::_M_need_rehash(unsigned long, unsigned long, unsigned long) const
+     14    0.1%    0.2%  __lll_lock_wait
+     12    0.1%    0.2%  v8::Uint32::Value() const
+     11    0.1%    0.2%  v8::internal::MarkingBarrier(v8::internal::HeapObject, v8::internal::FullObjectSlot, v8::internal::Object)
+     11    0.1%    0.2%  node::Buffer::Data(v8::Local<v8::Value>)
+      8    0.0%    0.1%  v8::internal::heap_internals::GenerationalBarrierInternal(v8::internal::HeapObject, unsigned long, v8::internal::HeapObject)
+      8    0.0%    0.1%  v8::Value::IsUint32() const
+      8    0.0%    0.1%  node::Buffer::Length(v8::Local<v8::Value>)
+      7    0.0%    0.1%  operator new(unsigned long)
+      6    0.0%    0.1%  v8::String::Length() const
+      5    0.0%    0.1%  pthread_self
+      4    0.0%    0.1%  std::__detail::_Prime_rehash_policy::_M_next_bkt(unsigned long) const
+      4    0.0%    0.1%  node::Environment::PrintSyncTrace() const
+      3    0.0%    0.1%  operator delete(void*)
+      2    0.0%    0.0%  node::fs::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.0%    0.0%  node::binding::GetInternalBinding(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.0%    0.0%  _IO_fwrite
+      1    0.0%    0.0%  v8::internal::tracing::ScopedTracer::~ScopedTracer()
+      1    0.0%    0.0%  v8::internal::HandleScopeImplementer::IterateThis(v8::internal::RootVisitor*)
+      1    0.0%    0.0%  v8::internal::HandleScopeImplementer::Iterate(v8::internal::RootVisitor*)
+      1    0.0%    0.0%  std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::do_put(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const
+      1    0.0%    0.0%  node::fs::Open(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  node::fs::Close(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  node::StringBytes::IsValidString(v8::Local<v8::String>, node::encoding)
+      1    0.0%    0.0%  fputc
+      1    0.0%    0.0%  do_futex_wait.constprop.0
+      1    0.0%    0.0%  _IO_default_xsputn
+
+ [Summary]:
+   ticks  total  nonlib   name
+    422    2.0%    7.3%  JavaScript
+   5368   25.2%   92.6%  C++
+    530    2.5%    9.1%  GC
+  15486   72.8%          Shared libraries
+      6    0.0%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+  13637   67.7%   64.1%  node::task_queue::RunMicrotasks(v8::FunctionCallbackInfo<v8::Value> const&)
+   2063   10.2%    9.7%  v8::internal::Builtin_ArrayBufferConstructor(int, unsigned long*, v8::internal::Isolate*)
+    979    4.9%    4.6%  node::StringBytes::Encode(v8::Isolate*, char const*, unsigned long, node::encoding, v8::Local<v8::Value>*)
+    291    1.4%    1.4%  __GI___pthread_rwlock_unlock
+    285    1.4%    1.3%  __libc_malloc
+    232    1.2%    1.1%  int v8::(anonymous namespace)::WriteUtf8Impl<unsigned char>(v8::internal::Vector<unsigned char const>, char*, int, int, int*)
+    218    1.1%    1.0%  __GI___pthread_rwlock_wrlock
+    142    0.7%    0.7%  v8::String::NewFromOneByte(v8::Isolate*, unsigned char const*, v8::NewStringType, int)
+    138    0.7%    0.6%  v8::internal::String::Flatten(v8::internal::Isolate*, v8::internal::Handle<v8::internal::String>, v8::internal::AllocationType)
+    131    0.7%    0.6%  __libc_free
+    129    0.6%    0.6%  v8::HandleScope::HandleScope(v8::Isolate*)
+    123    0.6%    0.6%  node::crypto::RandomBytes(v8::FunctionCallbackInfo<v8::Value> const&)
+    121    0.6%    0.6%  v8::Value::IsArrayBufferView() const
+    119    0.6%    0.6%  v8::String::WriteUtf8(v8::Isolate*, char*, int, int*, int) const
+    116    0.6%    0.5%  node::ParseEncoding(char const*, node::encoding)
+     93    0.5%    0.4%  __GI___pthread_getspecific
+     90    0.4%    0.4%  v8::ArrayBuffer::GetContents()
+     88    0.4%    0.4%  void node::Buffer::(anonymous namespace)::StringSlice<(node::encoding)5>(v8::FunctionCallbackInfo<v8::Value> const&)
+     81    0.4%    0.4%  v8::Isolate::GetCurrentContext()
+     73    0.4%    0.3%  v8::Object::InternalFieldCount()
+     63    0.3%    0.3%  node::crypto::Hash::HashUpdate(v8::FunctionCallbackInfo<v8::Value> const&)
+     59    0.3%    0.3%  v8::HandleScope::~HandleScope()
+     59    0.3%    0.3%  node::Buffer::(anonymous namespace)::ParseArrayIndex(node::Environment*, v8::Local<v8::Value>, unsigned long, unsigned long*)
+     57    0.3%    0.3%  node::Utf8Value::Utf8Value(v8::Isolate*, v8::Local<v8::Value>)
+     54    0.3%    0.3%  node::StringBytes::StorageSize(v8::Isolate*, v8::Local<v8::Value>, node::encoding)
+     54    0.3%    0.3%  node::Environment::GetFromCallbackData(v8::Local<v8::Value>)
+     52    0.3%    0.2%  v8::Value::ToString(v8::Local<v8::Context>) const
+     52    0.3%    0.2%  _init
+     44    0.2%    0.2%  v8::internal::Builtin_HandleApiCall(int, unsigned long*, v8::internal::Isolate*)
+     44    0.2%    0.2%  v8::Value::IsObject() const
+     44    0.2%    0.2%  node::StringBytes::Write(v8::Isolate*, char*, unsigned long, v8::Local<v8::Value>, node::encoding, int*)
+     43    0.2%    0.2%  __libc_realloc
+     38    0.2%    0.2%  node::StringBytes::InlineDecoder::Decode(node::Environment*, v8::Local<v8::String>, v8::Local<v8::Value>, node::encoding)
+     36    0.2%    0.2%  v8::ArrayBufferView::Buffer()
+     32    0.2%    0.2%  node::ParseEncoding(v8::Isolate*, v8::Local<v8::Value>, node::encoding)
+     32    0.2%    0.2%  node::Buffer::HasInstance(v8::Local<v8::Value>)
+     29    0.1%    0.1%  v8::ArrayBufferView::ByteLength()
+     29    0.1%    0.1%  __GI___pthread_once
+     24    0.1%    0.1%  __write
+     21    0.1%    0.1%  v8::Value::IntegerValue(v8::Local<v8::Context>) const
+     21    0.1%    0.1%  node::crypto::RandomBytesJob::~RandomBytesJob()
+     19    0.1%    0.1%  node::BaseObject::FromJSObject(v8::Local<v8::Object>)
+     14    0.1%    0.1%  v8::ArrayBufferView::ByteOffset()
+     12    0.1%    0.1%  v8::Uint32::Value() const
+     11    0.1%    0.1%  node::Buffer::Data(v8::Local<v8::Value>)
+      8    0.0%    0.0%  v8::Value::IsUint32() const
+      8    0.0%    0.0%  node::Buffer::Length(v8::Local<v8::Value>)
+      6    0.0%    0.0%  v8::String::Length() const
+      5    0.0%    0.0%  pthread_self
+      4    0.0%    0.0%  node::inspector::(anonymous namespace)::InspectorConsoleCall(v8::FunctionCallbackInfo<v8::Value> const&)
+      4    0.0%    0.0%  node::Environment::PrintSyncTrace() const
+      2    0.0%    0.0%  operator new(unsigned long)
+      1    0.0%    0.0%  node::StringBytes::IsValidString(v8::Local<v8::String>, node::encoding)
+      1    0.0%    0.0%  __GI___pthread_mutex_lock
+      1    0.0%    0.0%  _IO_fwrite
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+  14394   67.6%  /home/moniz/.nvm/versions/node/v12.11.1/bin/node
+  12495   86.8%    LazyCompile: *startCPUComsumedProcess /mnt/d/work/play/jsp/node-async-block/src/promise.js:31:33
+  12495  100.0%      node::task_queue::RunMicrotasks(v8::FunctionCallbackInfo<v8::Value> const&)
+  12495  100.0%        LazyCompile: ~processTicksAndRejections internal/process/task_queues.js:65:35
+    966    6.7%    v8::internal::Builtin_ArrayBufferConstructor(int, unsigned long*, v8::internal::Isolate*)
+    965   99.9%      LazyCompile: *startCPUComsumedProcess /mnt/d/work/play/jsp/node-async-block/src/promise.js:31:33
+    965  100.0%        node::task_queue::RunMicrotasks(v8::FunctionCallbackInfo<v8::Value> const&)
+    965  100.0%          LazyCompile: ~processTicksAndRejections internal/process/task_queues.js:65:35
+    665    4.6%    node::task_queue::RunMicrotasks(v8::FunctionCallbackInfo<v8::Value> const&)
+    665  100.0%      LazyCompile: ~processTicksAndRejections internal/process/task_queues.js:65:35
+
+   1068    5.0%  /usr/lib/x86_64-linux-gnu/libc-2.31.so
+    455   42.6%    v8::internal::Builtin_ArrayBufferConstructor(int, unsigned long*, v8::internal::Isolate*)
+    454   99.8%      LazyCompile: *startCPUComsumedProcess /mnt/d/work/play/jsp/node-async-block/src/promise.js:31:33
+    454  100.0%        node::task_queue::RunMicrotasks(v8::FunctionCallbackInfo<v8::Value> const&)
+    454  100.0%          LazyCompile: ~processTicksAndRejections internal/process/task_queues.js:65:35
+    446   41.8%    LazyCompile: *startCPUComsumedProcess /mnt/d/work/play/jsp/node-async-block/src/promise.js:31:33
+    446  100.0%      node::task_queue::RunMicrotasks(v8::FunctionCallbackInfo<v8::Value> const&)
+    446  100.0%        LazyCompile: ~processTicksAndRejections internal/process/task_queues.js:65:35
+
+    979    4.6%  node::StringBytes::Encode(v8::Isolate*, char const*, unsigned long, node::encoding, v8::Local<v8::Value>*)
+    979  100.0%    LazyCompile: *startCPUComsumedProcess /mnt/d/work/play/jsp/node-async-block/src/promise.js:31:33
+    979  100.0%      node::task_queue::RunMicrotasks(v8::FunctionCallbackInfo<v8::Value> const&)
+    979  100.0%        LazyCompile: ~processTicksAndRejections internal/process/task_queues.js:65:35
+
+    405    1.9%  __libc_malloc
+    285   70.4%    LazyCompile: *startCPUComsumedProcess /mnt/d/work/play/jsp/node-async-block/src/promise.js:31:33
+    285  100.0%      node::task_queue::RunMicrotasks(v8::FunctionCallbackInfo<v8::Value> const&)
+    285  100.0%        LazyCompile: ~processTicksAndRejections internal/process/task_queues.js:65:35
+    116   28.6%    v8::internal::Builtin_ArrayBufferConstructor(int, unsigned long*, v8::internal::Isolate*)
+    116  100.0%      LazyCompile: *startCPUComsumedProcess /mnt/d/work/play/jsp/node-async-block/src/promise.js:31:33
+    116  100.0%        node::task_queue::RunMicrotasks(v8::FunctionCallbackInfo<v8::Value> const&)
+    116  100.0%          LazyCompile: ~processTicksAndRejections internal/process/task_queues.js:65:35
+
+    291    1.4%  __GI___pthread_rwlock_unlock
+    291  100.0%    LazyCompile: *startCPUComsumedProcess /mnt/d/work/play/jsp/node-async-block/src/promise.js:31:33
+    291  100.0%      node::task_queue::RunMicrotasks(v8::FunctionCallbackInfo<v8::Value> const&)
+    291  100.0%        LazyCompile: ~processTicksAndRejections internal/process/task_queues.js:65:35
+
+    284    1.3%  LazyCompile: *startCPUComsumedProcess /mnt/d/work/play/jsp/node-async-block/src/promise.js:31:33
+    284  100.0%    node::task_queue::RunMicrotasks(v8::FunctionCallbackInfo<v8::Value> const&)
+    284  100.0%      LazyCompile: ~processTicksAndRejections internal/process/task_queues.js:65:35
+
+    232    1.1%  int v8::(anonymous namespace)::WriteUtf8Impl<unsigned char>(v8::internal::Vector<unsigned char const>, char*, int, int, int*)
+    232  100.0%    LazyCompile: *startCPUComsumedProcess /mnt/d/work/play/jsp/node-async-block/src/promise.js:31:33
+    232  100.0%      node::task_queue::RunMicrotasks(v8::FunctionCallbackInfo<v8::Value> const&)
+    232  100.0%        LazyCompile: ~processTicksAndRejections internal/process/task_queues.js:65:35
+
+    218    1.0%  __GI___pthread_rwlock_wrlock
+    218  100.0%    LazyCompile: *startCPUComsumedProcess /mnt/d/work/play/jsp/node-async-block/src/promise.js:31:33
+    218  100.0%      node::task_queue::RunMicrotasks(v8::FunctionCallbackInfo<v8::Value> const&)
+    218  100.0%        LazyCompile: ~processTicksAndRejections internal/process/task_queues.js:65:35
+

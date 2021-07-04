@@ -1,0 +1,9 @@
+{
+  "name": "event-loop-play-ground",
+  "version": "0.0.1",
+  "description": "unblock the event loop",
+  "main": "index.js",
+  "author": "Minh Nguyen Van",
+  "license": "ISC",
+  "dependencies": {  }
+}

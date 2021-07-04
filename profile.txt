@@ -1,0 +1,370 @@
+Statistical profiling result from isolate-0x38c31a0-3528-v8.log, (19686 ticks, 6 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+  13272   67.4%          /home/moniz/.nvm/versions/node/v12.11.1/bin/node
+    986    5.0%          /usr/lib/x86_64-linux-gnu/libc-2.31.so
+     11    0.1%          /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28
+      5    0.0%          [vdso]
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+    194    1.0%    3.6%  LazyCompile: *startCPUComsumedProcess /mnt/d/work/play/jsp/src/instancely.js:21:33
+     45    0.2%    0.8%  LazyCompile: *getEncodingOps buffer.js:644:24
+     32    0.2%    0.6%  LazyCompile: *<anonymous> buffer.js:319:36
+
+ [C++]:
+   ticks  total  nonlib   name
+    864    4.4%   16.0%  node::StringBytes::Encode(v8::Isolate*, char const*, unsigned long, node::encoding, v8::Local<v8::Value>*)
+    347    1.8%    6.4%  __libc_malloc
+    319    1.6%    5.9%  __GI___pthread_rwlock_unlock
+    255    1.3%    4.7%  __write
+    223    1.1%    4.1%  int v8::(anonymous namespace)::WriteUtf8Impl<unsigned char>(v8::internal::Vector<unsigned char const>, char*, int, int, int*)
+    217    1.1%    4.0%  __GI___pthread_rwlock_wrlock
+    183    0.9%    3.4%  __libc_calloc
+    149    0.8%    2.8%  node::crypto::RandomBytes(v8::FunctionCallbackInfo<v8::Value> const&)
+    135    0.7%    2.5%  node::ParseEncoding(char const*, node::encoding)
+    131    0.7%    2.4%  v8::Value::IsArrayBufferView() const
+    109    0.6%    2.0%  v8::String::NewFromOneByte(v8::Isolate*, unsigned char const*, v8::NewStringType, int)
+    107    0.5%    2.0%  v8::String::WriteUtf8(v8::Isolate*, char*, int, int*, int) const
+    107    0.5%    2.0%  v8::HandleScope::HandleScope(v8::Isolate*)
+     96    0.5%    1.8%  void node::Buffer::(anonymous namespace)::StringSlice<(node::encoding)5>(v8::FunctionCallbackInfo<v8::Value> const&)
+     96    0.5%    1.8%  __GI___pthread_getspecific
+     91    0.5%    1.7%  node::Buffer::(anonymous namespace)::ParseArrayIndex(node::Environment*, v8::Local<v8::Value>, unsigned long, unsigned long*)
+     90    0.5%    1.7%  v8::ArrayBuffer::GetContents()
+     87    0.4%    1.6%  __libc_free
+     86    0.4%    1.6%  _init
+     86    0.4%    1.6%  __GI___pthread_mutex_lock
+     84    0.4%    1.6%  v8::internal::String::Flatten(v8::internal::Isolate*, v8::internal::Handle<v8::internal::String>, v8::internal::AllocationType)
+     78    0.4%    1.4%  node::crypto::Hash::HashUpdate(v8::FunctionCallbackInfo<v8::Value> const&)
+     72    0.4%    1.3%  v8::Isolate::GetCurrentContext()
+     72    0.4%    1.3%  __GI___pthread_mutex_unlock
+     64    0.3%    1.2%  v8::HandleScope::~HandleScope()
+     61    0.3%    1.1%  node::StringBytes::StorageSize(v8::Isolate*, v8::Local<v8::Value>, node::encoding)
+     56    0.3%    1.0%  v8::Value::IsObject() const
+     53    0.3%    1.0%  __pthread_cond_signal
+     50    0.3%    0.9%  v8::ArrayBufferView::Buffer()
+     46    0.2%    0.8%  node::Environment::GetFromCallbackData(v8::Local<v8::Value>)
+     44    0.2%    0.8%  node::Utf8Value::Utf8Value(v8::Isolate*, v8::Local<v8::Value>)
+     44    0.2%    0.8%  node::BaseObject::FromJSObject(v8::Local<v8::Object>)
+     43    0.2%    0.8%  node::native_module::NativeModuleEnv::CompileFunction(v8::FunctionCallbackInfo<v8::Value> const&)
+     43    0.2%    0.8%  node::StringBytes::InlineDecoder::Decode(node::Environment*, v8::Local<v8::String>, v8::Local<v8::Value>, node::encoding)
+     40    0.2%    0.7%  v8::internal::Builtin_ArrayBufferConstructor(int, unsigned long*, v8::internal::Isolate*)
+     40    0.2%    0.7%  v8::Value::ToString(v8::Local<v8::Context>) const
+     39    0.2%    0.7%  node::ParseEncoding(v8::Isolate*, v8::Local<v8::Value>, node::encoding)
+     30    0.2%    0.6%  v8::Object::InternalFieldCount()
+     30    0.2%    0.6%  __lll_lock_wait
+     29    0.1%    0.5%  v8::ArrayBufferView::ByteLength()
+     28    0.1%    0.5%  node::StringBytes::Write(v8::Isolate*, char*, unsigned long, v8::Local<v8::Value>, node::encoding, int*)
+     27    0.1%    0.5%  node::Buffer::HasInstance(v8::Local<v8::Value>)
+     26    0.1%    0.5%  v8::internal::MarkingBarrier(v8::internal::HeapObject, v8::internal::FullObjectSlot, v8::internal::Object)
+     26    0.1%    0.5%  v8::ArrayBufferView::ByteOffset()
+     24    0.1%    0.4%  node::NodeArrayBufferAllocator::Allocate(unsigned long)
+     22    0.1%    0.4%  v8::Value::IntegerValue(v8::Local<v8::Context>) const
+     21    0.1%    0.4%  __GI___pthread_once
+     19    0.1%    0.4%  __libc_realloc
+     18    0.1%    0.3%  node::crypto::RandomBytesJob::~RandomBytesJob()
+     18    0.1%    0.3%  node::Buffer::Data(v8::Local<v8::Value>)
+     14    0.1%    0.3%  v8::String::Length() const
+     11    0.1%    0.2%  std::__detail::_Prime_rehash_policy::_M_need_rehash(unsigned long, unsigned long, unsigned long) const
+     11    0.1%    0.2%  operator new(unsigned long)
+      9    0.0%    0.2%  v8::Uint32::Value() const
+      9    0.0%    0.2%  node::Environment::PrintSyncTrace() const
+      9    0.0%    0.2%  node::Buffer::Length(v8::Local<v8::Value>)
+      8    0.0%    0.1%  operator delete(void*)
+      5    0.0%    0.1%  pthread_self
+      4    0.0%    0.1%  v8::internal::heap_internals::GenerationalBarrierInternal(v8::internal::HeapObject, unsigned long, v8::internal::HeapObject)
+      4    0.0%    0.1%  v8::Value::IsUint32() const
+      4    0.0%    0.1%  std::__detail::_Prime_rehash_policy::_M_next_bkt(unsigned long) const
+      3    0.0%    0.1%  epoll_pwait
+      2    0.0%    0.0%  node::binding::GetInternalBinding(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.0%    0.0%  node::StringBytes::IsValidString(v8::Local<v8::String>, node::encoding)
+      2    0.0%    0.0%  node::NodePlatform::MonotonicallyIncreasingTime()
+      2    0.0%    0.0%  brk
+      1    0.0%    0.0%  void node::StreamBase::JSMethod<&(int node::StreamBase::WriteString<(node::encoding)1>(v8::FunctionCallbackInfo<v8::Value> const&))>(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  v8::internal::tracing::ScopedTracer::~ScopedTracer()
+      1    0.0%    0.0%  v8::internal::Zone::New(unsigned long)
+      1    0.0%    0.0%  v8::internal::AstValueFactory::GetString(unsigned int, bool, v8::internal::Vector<unsigned char const>)
+      1    0.0%    0.0%  std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long)
+      1    0.0%    0.0%  node::fs::Open(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  node::fs::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  node::fs::InternalModuleStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  node::fs::FStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  __mprotect
+      1    0.0%    0.0%  _IO_file_xsputn
+
+ [Summary]:
+   ticks  total  nonlib   name
+    271    1.4%    5.0%  JavaScript
+   5135   26.1%   94.9%  C++
+    567    2.9%   10.5%  GC
+  14274   72.5%          Shared libraries
+      6    0.0%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+   1884   30.8%    9.6%  v8::internal::Builtin_ArrayBufferConstructor(int, unsigned long*, v8::internal::Isolate*)
+    864   14.1%    4.4%  node::StringBytes::Encode(v8::Isolate*, char const*, unsigned long, node::encoding, v8::Local<v8::Value>*)
+    319    5.2%    1.6%  __GI___pthread_rwlock_unlock
+    223    3.7%    1.1%  int v8::(anonymous namespace)::WriteUtf8Impl<unsigned char>(v8::internal::Vector<unsigned char const>, char*, int, int, int*)
+    218    3.6%    1.1%  __libc_malloc
+    217    3.6%    1.1%  __GI___pthread_rwlock_wrlock
+    144    2.4%    0.7%  node::crypto::RandomBytes(v8::FunctionCallbackInfo<v8::Value> const&)
+    135    2.2%    0.7%  node::ParseEncoding(char const*, node::encoding)
+    131    2.1%    0.7%  v8::Value::IsArrayBufferView() const
+    109    1.8%    0.6%  v8::String::NewFromOneByte(v8::Isolate*, unsigned char const*, v8::NewStringType, int)
+    107    1.8%    0.5%  v8::String::WriteUtf8(v8::Isolate*, char*, int, int*, int) const
+    107    1.8%    0.5%  v8::HandleScope::HandleScope(v8::Isolate*)
+     96    1.6%    0.5%  void node::Buffer::(anonymous namespace)::StringSlice<(node::encoding)5>(v8::FunctionCallbackInfo<v8::Value> const&)
+     96    1.6%    0.5%  __GI___pthread_getspecific
+     91    1.5%    0.5%  node::Buffer::(anonymous namespace)::ParseArrayIndex(node::Environment*, v8::Local<v8::Value>, unsigned long, unsigned long*)
+     90    1.5%    0.5%  v8::ArrayBuffer::GetContents()
+     84    1.4%    0.4%  v8::internal::String::Flatten(v8::internal::Isolate*, v8::internal::Handle<v8::internal::String>, v8::internal::AllocationType)
+     82    1.3%    0.4%  _init
+     76    1.2%    0.4%  node::crypto::Hash::HashUpdate(v8::FunctionCallbackInfo<v8::Value> const&)
+     72    1.2%    0.4%  v8::Isolate::GetCurrentContext()
+     65    1.1%    0.3%  __libc_free
+     64    1.0%    0.3%  v8::HandleScope::~HandleScope()
+     61    1.0%    0.3%  node::StringBytes::StorageSize(v8::Isolate*, v8::Local<v8::Value>, node::encoding)
+     58    0.9%    0.3%  v8::internal::Builtin_HandleApiCall(int, unsigned long*, v8::internal::Isolate*)
+     56    0.9%    0.3%  v8::Value::IsObject() const
+     50    0.8%    0.3%  v8::ArrayBufferView::Buffer()
+     46    0.8%    0.2%  node::Environment::GetFromCallbackData(v8::Local<v8::Value>)
+     44    0.7%    0.2%  node::Utf8Value::Utf8Value(v8::Isolate*, v8::Local<v8::Value>)
+     44    0.7%    0.2%  node::BaseObject::FromJSObject(v8::Local<v8::Object>)
+     43    0.7%    0.2%  node::StringBytes::InlineDecoder::Decode(node::Environment*, v8::Local<v8::String>, v8::Local<v8::Value>, node::encoding)
+     43    0.7%    0.2%  __write
+     40    0.7%    0.2%  v8::Value::ToString(v8::Local<v8::Context>) const
+     39    0.6%    0.2%  node::ParseEncoding(v8::Isolate*, v8::Local<v8::Value>, node::encoding)
+     30    0.5%    0.2%  v8::Object::InternalFieldCount()
+     29    0.5%    0.1%  v8::ArrayBufferView::ByteLength()
+     28    0.5%    0.1%  node::StringBytes::Write(v8::Isolate*, char*, unsigned long, v8::Local<v8::Value>, node::encoding, int*)
+     27    0.4%    0.1%  node::Buffer::HasInstance(v8::Local<v8::Value>)
+     26    0.4%    0.1%  v8::ArrayBufferView::ByteOffset()
+     22    0.4%    0.1%  v8::Value::IntegerValue(v8::Local<v8::Context>) const
+     21    0.3%    0.1%  __GI___pthread_once
+     19    0.3%    0.1%  __libc_realloc
+     18    0.3%    0.1%  node::crypto::RandomBytesJob::~RandomBytesJob()
+     18    0.3%    0.1%  node::Buffer::Data(v8::Local<v8::Value>)
+     14    0.2%    0.1%  v8::String::Length() const
+      9    0.1%    0.0%  v8::Uint32::Value() const
+      9    0.1%    0.0%  node::Environment::PrintSyncTrace() const
+      9    0.1%    0.0%  node::Buffer::Length(v8::Local<v8::Value>)
+      6    0.1%    0.0%  operator new(unsigned long)
+      5    0.1%    0.0%  pthread_self
+      4    0.1%    0.0%  v8::Value::IsUint32() const
+      4    0.1%    0.0%  operator delete(void*)
+      4    0.1%    0.0%  node::inspector::(anonymous namespace)::InspectorConsoleCall(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.0%    0.0%  node::StringBytes::IsValidString(v8::Local<v8::String>, node::encoding)
+      1    0.0%    0.0%  v8::internal::Zone::New(unsigned long)
+      1    0.0%    0.0%  v8::internal::Builtin_JsonParse(int, unsigned long*, v8::internal::Isolate*)
+      1    0.0%    0.0%  v8::internal::AstValueFactory::GetString(unsigned int, bool, v8::internal::Vector<unsigned char const>)
+      1    0.0%    0.0%  __pthread_cond_signal
+      1    0.0%    0.0%  _IO_file_xsputn
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+  13272   67.4%  /home/moniz/.nvm/versions/node/v12.11.1/bin/node
+  11978   90.3%    LazyCompile: *startCPUComsumedProcess /mnt/d/work/play/jsp/src/instancely.js:21:33
+  11978  100.0%      Eval: ~<anonymous> /mnt/d/work/play/jsp/src/instancely.js:1:1
+  11978  100.0%        LazyCompile: ~Module._compile internal/modules/cjs/loader.js:854:37
+  11978  100.0%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:954:37
+  11978  100.0%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:790:33
+    911    6.9%    v8::internal::Builtin_ArrayBufferConstructor(int, unsigned long*, v8::internal::Isolate*)
+    911  100.0%      LazyCompile: *startCPUComsumedProcess /mnt/d/work/play/jsp/src/instancely.js:21:33
+    911  100.0%        Eval: ~<anonymous> /mnt/d/work/play/jsp/src/instancely.js:1:1
+    911  100.0%          LazyCompile: ~Module._compile internal/modules/cjs/loader.js:854:37
+    911  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:954:37
+
+    986    5.0%  /usr/lib/x86_64-linux-gnu/libc-2.31.so
+    416   42.2%    v8::internal::Builtin_ArrayBufferConstructor(int, unsigned long*, v8::internal::Isolate*)
+    415   99.8%      LazyCompile: *startCPUComsumedProcess /mnt/d/work/play/jsp/src/instancely.js:21:33
+    415  100.0%        Eval: ~<anonymous> /mnt/d/work/play/jsp/src/instancely.js:1:1
+    415  100.0%          LazyCompile: ~Module._compile internal/modules/cjs/loader.js:854:37
+    415  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:954:37
+    392   39.8%    LazyCompile: *startCPUComsumedProcess /mnt/d/work/play/jsp/src/instancely.js:21:33
+    392  100.0%      Eval: ~<anonymous> /mnt/d/work/play/jsp/src/instancely.js:1:1
+    392  100.0%        LazyCompile: ~Module._compile internal/modules/cjs/loader.js:854:37
+    392  100.0%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:954:37
+    392  100.0%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:790:33
+
+    864    4.4%  node::StringBytes::Encode(v8::Isolate*, char const*, unsigned long, node::encoding, v8::Local<v8::Value>*)
+    864  100.0%    LazyCompile: *startCPUComsumedProcess /mnt/d/work/play/jsp/src/instancely.js:21:33
+    864  100.0%      Eval: ~<anonymous> /mnt/d/work/play/jsp/src/instancely.js:1:1
+    864  100.0%        LazyCompile: ~Module._compile internal/modules/cjs/loader.js:854:37
+    864  100.0%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:954:37
+    864  100.0%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:790:33
+
+    347    1.8%  __libc_malloc
+    217   62.5%    LazyCompile: *startCPUComsumedProcess /mnt/d/work/play/jsp/src/instancely.js:21:33
+    217  100.0%      Eval: ~<anonymous> /mnt/d/work/play/jsp/src/instancely.js:1:1
+    217  100.0%        LazyCompile: ~Module._compile internal/modules/cjs/loader.js:854:37
+    217  100.0%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:954:37
+    217  100.0%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:790:33
+    120   34.6%    v8::internal::Builtin_ArrayBufferConstructor(int, unsigned long*, v8::internal::Isolate*)
+    120  100.0%      LazyCompile: *startCPUComsumedProcess /mnt/d/work/play/jsp/src/instancely.js:21:33
+    120  100.0%        Eval: ~<anonymous> /mnt/d/work/play/jsp/src/instancely.js:1:1
+    120  100.0%          LazyCompile: ~Module._compile internal/modules/cjs/loader.js:854:37
+    120  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:954:37
+
+    319    1.6%  __GI___pthread_rwlock_unlock
+    319  100.0%    LazyCompile: *startCPUComsumedProcess /mnt/d/work/play/jsp/src/instancely.js:21:33
+    319  100.0%      Eval: ~<anonymous> /mnt/d/work/play/jsp/src/instancely.js:1:1
+    319  100.0%        LazyCompile: ~Module._compile internal/modules/cjs/loader.js:854:37
+    319  100.0%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:954:37
+    319  100.0%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:790:33
+
+    255    1.3%  __write
+     43   16.9%    /home/moniz/.nvm/versions/node/v12.11.1/bin/node
+      3    7.0%      LazyCompile: ~prepareMainThreadExecution internal/bootstrap/pre_execution.js:9:36
+      3  100.0%        Eval: ~<anonymous> internal/main/run_main_module.js:1:1
+      2    4.7%      LazyCompile: ~realpathSync fs.js:1459:22
+      2  100.0%        LazyCompile: ~toRealPath internal/modules/cjs/loader.js:331:20
+      2  100.0%          LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:458:28
+      2  100.0%            LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:725:35
+      2    4.7%      LazyCompile: ~Console.<computed> internal/console/constructor.js:210:46
+      2  100.0%        LazyCompile: ~log internal/console/constructor.js:281:6
+      2  100.0%          node::inspector::(anonymous namespace)::InspectorConsoleCall(v8::FunctionCallbackInfo<v8::Value> const&)
+      2  100.0%            LazyCompile: ~log /mnt/d/work/play/jsp/src/instancely.js:13:13
+      2    4.7%      LazyCompile: ~<anonymous> /mnt/d/work/play/jsp/src/instancely.js:7:28
+      2  100.0%        LazyCompile: ~listOnTimeout internal/timers.js:480:25
+      2  100.0%          LazyCompile: ~processTimers internal/timers.js:460:25
+      1    2.3%      LazyCompile: ~update internal/crypto/hash.js:63:40
+      1  100.0%        LazyCompile: ~startCPUComsumedProcess /mnt/d/work/play/jsp/src/instancely.js:21:33
+      1  100.0%          Eval: ~<anonymous> /mnt/d/work/play/jsp/src/instancely.js:1:1
+      1  100.0%            LazyCompile: ~Module._compile internal/modules/cjs/loader.js:854:37
+      1    2.3%      LazyCompile: ~toString buffer.js:741:46
+      1  100.0%        LazyCompile: ~readFileSync fs.js:350:22
+      1  100.0%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:954:37
+      1  100.0%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:790:33
+      1    2.3%      LazyCompile: ~setupSignalHandlers internal/bootstrap/pre_execution.js:159:29
+      1  100.0%        LazyCompile: ~prepareMainThreadExecution internal/bootstrap/pre_execution.js:9:36
+      1  100.0%          Eval: ~<anonymous> internal/main/run_main_module.js:1:1
+      1    2.3%      LazyCompile: ~setupProcessObject internal/bootstrap/node.js:319:28
+      1  100.0%        Eval: ~<anonymous> internal/bootstrap/node.js:1:1
+      1    2.3%      LazyCompile: ~readFileSync fs.js:350:22
+      1  100.0%        LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:954:37
+      1  100.0%          LazyCompile: ~Module.load internal/modules/cjs/loader.js:790:33
+      1  100.0%            LazyCompile: ~Module._load internal/modules/cjs/loader.js:666:24
+      1    2.3%      LazyCompile: ~processTicksAndRejections internal/process/task_queues.js:65:35
+      1    2.3%      LazyCompile: ~nextTick internal/process/task_queues.js:101:18
+      1  100.0%        LazyCompile: ~onwrite _stream_writable.js:459:17
+      1  100.0%          LazyCompile: ~afterWriteDispatched internal/stream_base_commons.js:145:30
+      1  100.0%            LazyCompile: ~writeGeneric internal/stream_base_commons.js:137:22
+      1    2.3%      LazyCompile: ~listOnTimeout internal/timers.js:480:25
+      1  100.0%        LazyCompile: ~processTimers internal/timers.js:460:25
+      1    2.3%      LazyCompile: ~isEncoding buffer.js:505:40
+      1  100.0%        LazyCompile: ~assertEncoding internal/fs/utils.js:72:24
+      1  100.0%          LazyCompile: ~getOptions internal/fs/utils.js:181:20
+      1  100.0%            LazyCompile: ~readFileSync fs.js:350:22
+      1    2.3%      LazyCompile: ~insert internal/timers.js:305:16
+      1  100.0%        LazyCompile: ~active internal/timers.js:291:16
+      1  100.0%          LazyCompile: ~setInterval timers.js:162:21
+      1  100.0%            Eval: ~<anonymous> /mnt/d/work/play/jsp/src/instancely.js:1:1
+      1    2.3%      LazyCompile: ~initAsyncResource internal/timers.js:142:27
+      1  100.0%        LazyCompile: ~Timeout internal/timers.js:152:17
+      1  100.0%          LazyCompile: ~setInterval timers.js:162:21
+      1  100.0%            Eval: ~<anonymous> /mnt/d/work/play/jsp/src/instancely.js:1:1
+      1    2.3%      LazyCompile: ~hidden internal/errors.js:233:25
+      1  100.0%        LazyCompile: ~readSync fs.js:493:18
+      1  100.0%          LazyCompile: ~tryReadSync fs.js:338:21
+      1  100.0%            LazyCompile: ~readFileSync fs.js:350:22
+      1    2.3%      LazyCompile: ~formatWithOptions internal/util/inspect.js:1569:27
+      1  100.0%        LazyCompile: ~Console.<computed> internal/console/constructor.js:270:47
+      1  100.0%          LazyCompile: ~log internal/console/constructor.js:281:6
+      1  100.0%            node::inspector::(anonymous namespace)::InspectorConsoleCall(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    2.3%      LazyCompile: ~findLongestRegisteredExtension internal/modules/cjs/loader.js:351:40
+      1  100.0%        LazyCompile: ~Module.load internal/modules/cjs/loader.js:790:33
+      1  100.0%          LazyCompile: ~Module._load internal/modules/cjs/loader.js:666:24
+      1  100.0%            LazyCompile: ~Module.runMain internal/modules/cjs/loader.js:1000:26
+      1    2.3%      LazyCompile: ~createWritableStdioStream internal/process/stdio.js:149:35
+      1  100.0%        LazyCompile: ~getStdout internal/process/stdio.js:26:21
+      1  100.0%          LazyCompile: ~get internal/console/constructor.js:148:10
+      1  100.0%            LazyCompile: ~Console.<computed> internal/console/constructor.js:270:47
+      1    2.3%      LazyCompile: ~createHash crypto.js:106:20
+      1  100.0%        Eval: ~<anonymous> /mnt/d/work/play/jsp/src/instancely.js:1:1
+      1  100.0%          LazyCompile: ~Module._compile internal/modules/cjs/loader.js:854:37
+      1  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:954:37
+      1    2.3%      LazyCompile: ~assertSize internal/crypto/random.js:31:20
+      1  100.0%        LazyCompile: ~randomBytes internal/crypto/random.js:47:21
+      1  100.0%          LazyCompile: ~startCPUComsumedProcess /mnt/d/work/play/jsp/src/instancely.js:21:33
+      1  100.0%            Eval: ~<anonymous> /mnt/d/work/play/jsp/src/instancely.js:1:1
+      1    2.3%      LazyCompile: ~append internal/linkedlist.js:29:16
+      1  100.0%        LazyCompile: ~insert internal/timers.js:305:16
+      1  100.0%          LazyCompile: ~active internal/timers.js:291:16
+      1  100.0%            LazyCompile: ~setInterval timers.js:162:21
+      1    2.3%      LazyCompile: ~afterWriteDispatched internal/stream_base_commons.js:145:30
+      1  100.0%        LazyCompile: ~writeGeneric internal/stream_base_commons.js:137:22
+      1  100.0%          LazyCompile: ~Socket._writeGeneric net.js:742:42
+      1  100.0%            LazyCompile: ~Socket._write net.js:779:35
+      1    2.3%      LazyCompile: ~afterWrite _stream_writable.js:493:20
+      1  100.0%        LazyCompile: ~processTicksAndRejections internal/process/task_queues.js:65:35
+      1    2.3%      LazyCompile: ~addListener events.js:283:58
+      1  100.0%        LazyCompile: ~setupWarningHandler internal/bootstrap/pre_execution.js:106:29
+      1  100.0%          LazyCompile: ~prepareMainThreadExecution internal/bootstrap/pre_execution.js:9:36
+      1  100.0%            Eval: ~<anonymous> internal/main/run_main_module.js:1:1
+      1    2.3%      LazyCompile: ~Socket._writeGeneric net.js:742:42
+      1  100.0%        LazyCompile: ~Socket._write net.js:779:35
+      1  100.0%          LazyCompile: ~doWrite _stream_writable.js:421:17
+      1  100.0%            LazyCompile: ~writeOrBuffer _stream_writable.js:381:23
+      1    2.3%      LazyCompile: ~Socket net.js:252:16
+      1  100.0%        LazyCompile: ~WriteStream tty.js:80:21
+      1  100.0%          LazyCompile: ~createWritableStdioStream internal/process/stdio.js:149:35
+      1  100.0%            LazyCompile: ~getStdout internal/process/stdio.js:26:21
+      1    2.3%      LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:725:35
+      1  100.0%        LazyCompile: ~Module._load internal/modules/cjs/loader.js:666:24
+      1  100.0%          LazyCompile: ~Module.runMain internal/modules/cjs/loader.js:1000:26
+      1  100.0%            Eval: ~<anonymous> internal/main/run_main_module.js:1:1
+      1    2.3%      LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:458:28
+      1  100.0%        LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:725:35
+      1  100.0%          LazyCompile: ~Module._load internal/modules/cjs/loader.js:666:24
+      1  100.0%            LazyCompile: ~Module.runMain internal/modules/cjs/loader.js:1000:26
+      1    2.3%      LazyCompile: ~Module._compile internal/modules/cjs/loader.js:854:37
+      1  100.0%        LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:954:37
+      1  100.0%          LazyCompile: ~Module.load internal/modules/cjs/loader.js:790:33
+      1  100.0%            LazyCompile: ~Module._load internal/modules/cjs/loader.js:666:24
+      1    2.3%      LazyCompile: ~Module internal/modules/cjs/loader.js:130:16
+      1  100.0%        LazyCompile: ~Module._load internal/modules/cjs/loader.js:666:24
+      1  100.0%          LazyCompile: ~Module.runMain internal/modules/cjs/loader.js:1000:26
+      1  100.0%            Eval: ~<anonymous> internal/main/run_main_module.js:1:1
+      1    2.3%      LazyCompile: ~E internal/errors.js:276:11
+      1  100.0%        Eval: ~<anonymous> internal/errors.js:1:1
+      1  100.0%          LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:290:42
+      1  100.0%            LazyCompile: ~nativeModuleRequire internal/bootstrap/loaders.js:183:29
+      1    2.3%      Eval: ~<anonymous> internal/validators.js:1:1
+      1  100.0%        LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:290:42
+      1  100.0%          LazyCompile: ~nativeModuleRequire internal/bootstrap/loaders.js:183:29
+      1  100.0%            Eval: ~<anonymous> buffer.js:1:1
+      1    2.3%      Eval: ~<anonymous> internal/url.js:1:1
+      1  100.0%        LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:290:42
+      1  100.0%          LazyCompile: ~nativeModuleRequire internal/bootstrap/loaders.js:183:29
+      1  100.0%            Eval: ~<anonymous> internal/bootstrap/node.js:1:1
+      1    2.3%      Eval: ~<anonymous> internal/streams/lazy_transform.js:1:1
+      1  100.0%        LazyCompile: ~NativeModule.compile internal/bootstrap/loaders.js:290:42
+      1  100.0%          LazyCompile: ~nativeModuleRequire internal/bootstrap/loaders.js:183:29
+      1  100.0%            Eval: ~<anonymous> internal/crypto/cipher.js:1:1
+      1    2.3%      Eval: ~<anonymous> internal/main/run_main_module.js:1:1
+      1    2.3%      Eval: ~<anonymous> internal/bootstrap/loaders.js:1:1
+      1    2.3%      Eval: ~<anonymous> /mnt/d/work/play/jsp/src/instancely.js:1:1
+      1  100.0%        LazyCompile: ~Module._compile internal/modules/cjs/loader.js:854:37
+      1  100.0%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:954:37
+      1  100.0%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:790:33
+
+    223    1.1%  int v8::(anonymous namespace)::WriteUtf8Impl<unsigned char>(v8::internal::Vector<unsigned char const>, char*, int, int, int*)
+    223  100.0%    LazyCompile: *startCPUComsumedProcess /mnt/d/work/play/jsp/src/instancely.js:21:33
+    223  100.0%      Eval: ~<anonymous> /mnt/d/work/play/jsp/src/instancely.js:1:1
+    223  100.0%        LazyCompile: ~Module._compile internal/modules/cjs/loader.js:854:37
+    223  100.0%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:954:37
+    223  100.0%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:790:33
+
+    217    1.1%  __GI___pthread_rwlock_wrlock
+    216   99.5%    LazyCompile: *startCPUComsumedProcess /mnt/d/work/play/jsp/src/instancely.js:21:33
+    216  100.0%      Eval: ~<anonymous> /mnt/d/work/play/jsp/src/instancely.js:1:1
+    216  100.0%        LazyCompile: ~Module._compile internal/modules/cjs/loader.js:854:37
+    216  100.0%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:954:37
+    216  100.0%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:790:33
+
