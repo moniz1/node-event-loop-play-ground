@@ -13,7 +13,9 @@ sh profile.sh ./src/filename
 ```
 The bash script basically run node with v8 profiling option and generate a reference file (profile file).
 
-src/instancely.js : a blocking code.
+I have 2 jobs for this process, an interval call with timers and a heavy cpu comsumed tasks, currently the interval is blocked and below are attempt to resolve it.
+
+src/instancely.js : a blocking process.
 
 src/promise.js : first attempt to solve the block by promise.
 
